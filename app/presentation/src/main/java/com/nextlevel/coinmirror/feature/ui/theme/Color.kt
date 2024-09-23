@@ -1,4 +1,4 @@
-package com.nextlevel.coinmirror.ui.theme
+package com.nextlevel.coinmirror.feature.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
