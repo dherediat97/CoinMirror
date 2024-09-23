@@ -21,4 +21,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "CoinMirror"
 include(":app")
- 
+include(":data")
+include(":presentation")
+include(":api_service")
