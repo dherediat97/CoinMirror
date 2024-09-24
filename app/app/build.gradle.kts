@@ -56,7 +56,7 @@ dependencies {
     api(project(":api_service"))
     api(project(":presentation"))
     api(libs.androidx.activity.compose)
-
+    api(libs.androidx.ui.tooling.preview)
     api(libs.hilt.android)
     kapt(libs.hilt.android.compiler)
 }
