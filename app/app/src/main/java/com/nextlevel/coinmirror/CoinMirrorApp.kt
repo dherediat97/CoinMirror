@@ -1,21 +1,15 @@
 package com.nextlevel.coinmirror
 
 import android.app.Application
-import com.nextlevel.coinmirror.apiservice.APIService
-import com.nextlevel.coinmirror.providers.ApiServiceProvider
+import com.nextlevel.coinmirror.di.AppComponent
+import com.nextlevel.coinmirror.di.DaggerAppComponent
 import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp
-class CoinMirrorApp : Application() {
+open class CoinMirrorApp : Application() {
 
-//    val appComponent = DaggerApplicationComponent.create()
-
-
-    override fun onCreate() {
-        super.onCreate()
+    val appComponent: AppComponent by lazy {
+        DaggerAppComponent.factory().create(applicationContext)
     }
 
-//    override fun provideApiService(): APIService {
-//        return appComponent.apiServiceComponent().create()
-//    }
 }

@@ -1,6 +1,7 @@
 package com.nextlevel.coinmirror.modules
 
 import com.nextlevel.coinmirror.apiservice.APIService
+import com.nextlevel.coinmirror.apiservice.constants.APIConstants
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -11,13 +12,13 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-object DataModule {
+object NetworkModule {
 
     @Singleton
     @Provides
     fun provideApiService(): APIService {
         return Retrofit.Builder()
-            .baseUrl("")
+            .baseUrl(APIConstants.BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(APIService::class.java)
