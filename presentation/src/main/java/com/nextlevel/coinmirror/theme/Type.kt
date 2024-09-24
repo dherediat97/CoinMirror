@@ -1,4 +1,4 @@
-package com.nextlevel.coinmirror.feature.ui.theme
+package com.nextlevel.coinmirror.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
