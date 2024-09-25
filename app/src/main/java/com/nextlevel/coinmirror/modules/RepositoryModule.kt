@@ -1,6 +1,7 @@
 package com.nextlevel.coinmirror.modules
 
-import com.nextlevel.coinmirror.data.globaldata.GlobalDataRepository
+import com.nextlevel.coinmirror.apiservice.CoinLoreAPIService
+import com.nextlevel.coinmirror.domain.repository.CoinMirrorRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -13,8 +14,8 @@ object RepositoryModule {
 
     @Singleton
     @Provides
-    fun provideGlobalDataRepository(): GlobalDataRepository {
-        return GlobalDataRepository()
+    fun provideGlobalDataRepository(coinLoreAPIService: CoinLoreAPIService): CoinMirrorRepository {
+        return CoinMirrorRepository(coinLoreAPIService)
     }
 
 }

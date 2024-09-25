@@ -22,7 +22,6 @@ fun CoinMirrorTopBar() {
         titleContentColor = MaterialTheme.colorScheme.onPrimary,
         navigationIconContentColor = MaterialTheme.colorScheme.onPrimary,
         actionIconContentColor = MaterialTheme.colorScheme.onPrimary,
-        scrolledContainerColor = MaterialTheme.colorScheme.onPrimary,
     ), actions = {
         IconButton(onClick = {}) {
             Icon(imageVector = Icons.Filled.Euro, contentDescription = "Switch currency action")

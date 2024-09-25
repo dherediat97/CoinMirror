@@ -25,7 +25,7 @@ private val LightColorScheme = lightColorScheme(
 
 @Composable
 fun CoinMirrorTheme(
-    darkTheme: Boolean = isSystemInDarkTheme(),
+    darkTheme: Boolean = !isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
     dynamicColor: Boolean = false,
     content: @Composable () -> Unit

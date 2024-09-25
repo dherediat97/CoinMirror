@@ -9,6 +9,7 @@ pluginManagement {
         }
         mavenCentral()
         gradlePluginPortal()
+        maven("https://oss.sonatype.org/content/repositories/snapshots/")
     }
 }
 dependencyResolutionManagement {
@@ -24,3 +25,4 @@ include(":app")
 include(":data")
 include(":presentation")
 include(":api_service")
+include(":domain")

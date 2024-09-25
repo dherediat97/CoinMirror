@@ -15,3 +15,6 @@ android {
         jvmTarget = "1.8"
     }
 }
+dependencies {
+    api(libs.retrofit.converter.gson)
+}

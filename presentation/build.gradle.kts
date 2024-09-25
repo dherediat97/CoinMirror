@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.compose.compiler)
+    alias(libs.plugins.kotlin.kapt)
+    alias(libs.plugins.hilt.android)
 }
 
 android {
@@ -30,6 +32,7 @@ android {
 }
 
 dependencies {
+    api(project(":domain"))
     api(project(":data"))
     api(platform(libs.androidx.compose.bom))
     api(libs.androidx.ui)
@@ -42,4 +45,9 @@ dependencies {
     api(platform(libs.androidx.compose.bom))
     api(libs.androidx.lifecycle.runtime.ktx)
     api(libs.androidx.lifecycle.viewmodel.compose)
+    api(libs.hilt.android)
+    kapt(libs.hilt.android.compiler)
+    api(libs.androidx.navigation.compose)
+    api(libs.androidx.hilt.navigation.compose)
+    api(libs.lottie.compose)
 }
