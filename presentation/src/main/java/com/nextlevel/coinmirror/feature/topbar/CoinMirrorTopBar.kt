@@ -1,30 +1,32 @@
 package com.nextlevel.coinmirror.feature.topbar
 
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Euro
+import androidx.compose.material.icons.filled.Add
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
-import androidx.compose.material3.TopAppBarDefaults
+import androidx.compose.material3.TopAppBarColors
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
+import com.nextlevel.coinmirror.theme.NavyBlue
+import com.nextlevel.coinmirror.theme.SimpleWhite
 
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Preview
 @Composable
 fun CoinMirrorTopBar() {
-    TopAppBar(colors = TopAppBarDefaults.topAppBarColors(
-        containerColor = MaterialTheme.colorScheme.primary,
-        titleContentColor = MaterialTheme.colorScheme.onPrimary,
-        navigationIconContentColor = MaterialTheme.colorScheme.onPrimary,
-        actionIconContentColor = MaterialTheme.colorScheme.onPrimary,
+    TopAppBar(colors = TopAppBarColors(
+        containerColor = NavyBlue,
+        titleContentColor = SimpleWhite,
+        actionIconContentColor = SimpleWhite,
+        navigationIconContentColor = SimpleWhite,
+        scrolledContainerColor = SimpleWhite,
     ), actions = {
         IconButton(onClick = {}) {
-            Icon(imageVector = Icons.Filled.Euro, contentDescription = "Switch currency action")
+            Icon(imageVector = Icons.Filled.Add, contentDescription = "Switch currency action")
         }
     },
         title = {
