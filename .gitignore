@@ -11,5 +11,6 @@ app/build
 data/build
 presentation/build
 api_service/build
+domain/build
 .idea/
 .kotlin/
