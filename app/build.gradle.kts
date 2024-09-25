@@ -15,7 +15,7 @@ android {
         minSdk = 26
         targetSdk = 34
         versionCode = 1
-        versionName = "1.0"
+        versionName = "0.0.1-alpha01"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -55,6 +55,8 @@ android {
 dependencies {
     api(project(":api_service"))
     api(project(":presentation"))
+    api(project(":data"))
+    api(project(":domain"))
     api(libs.androidx.activity.compose)
     api(libs.androidx.ui.tooling.preview)
     api(libs.hilt.android)
