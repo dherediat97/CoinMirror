@@ -1,12 +1,10 @@
 package com.nextlevel.coinmirror.main
 
 import androidx.compose.runtime.Composable
-import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.nextlevel.coinmirror.feature.home.Home
-import com.nextlevel.coinmirror.feature.home.viewmodel.HomeViewModel
 import com.nextlevel.coinmirror.feature.splash.Splash
 
 
@@ -20,8 +18,7 @@ fun NavigationGraph() {
         }
 
         composable("/home") {
-            val viewModel: HomeViewModel = hiltViewModel()
-            Home(viewModel)
+            Home()
         }
     }
 }
