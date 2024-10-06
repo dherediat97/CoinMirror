@@ -50,4 +50,5 @@ dependencies {
     api(libs.androidx.navigation.compose)
     api(libs.androidx.hilt.navigation.compose)
     api(libs.lottie.compose)
+    api(libs.compose.charts)
 }

@@ -17,13 +17,12 @@ class HomeViewModel @Inject constructor(private val repository: CoinMirrorReposi
         get() = _state
 
 
-    suspend fun getGlobalData() {
+    suspend fun getHomeData() {
         runCatching {
             _state.update {
                 it.copy(isLoading = true)
             }
             val data = repository.getSymbolData()
-            println(data)
             _state.update {
                 it.copy(
                     homeData = data
@@ -33,7 +32,6 @@ class HomeViewModel @Inject constructor(private val repository: CoinMirrorReposi
             _state.update {
                 it.copy(isError = true)
             }
-            println("error=$it")
         }
         _state.update {
             it.copy(isLoading = false)

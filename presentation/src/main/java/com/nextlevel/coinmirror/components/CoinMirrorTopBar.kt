@@ -1,4 +1,4 @@
-package com.nextlevel.coinmirror.feature.topbar
+package com.nextlevel.coinmirror.components
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
@@ -9,13 +9,11 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarColors
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.tooling.preview.Preview
 import com.nextlevel.coinmirror.theme.NavyBlue
 import com.nextlevel.coinmirror.theme.SimpleWhite
 
 
 @OptIn(ExperimentalMaterial3Api::class)
-@Preview
 @Composable
 fun CoinMirrorTopBar() {
     TopAppBar(colors = TopAppBarColors(
